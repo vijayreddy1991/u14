@@ -18,29 +18,29 @@ mv 90forceyes /etc/apt/apt.conf.d/
 touch $HOME/.ssh/known_hosts
 mkdir -p /etc/drydock
 
-echo "================= Installing basic packages ==================="
-apt-get install -y  \
-  sudo=1.8* \
-  build-essential=11.6* \
-  curl=7.35* \
-  gcc=4:4.8* \
-  make=3.81* \
-  openssl=1.0* \
-  software-properties-common=0.92* \
-  wget=1.15* \
-  nano=2.2* \
-  unzip=6.0* \
-  zip=3.0*\
-  openssh-client=1:6.6* \
-  libxslt1-dev=1.1* \
-  libxml2-dev=2.9* \
-  htop=1.0* \
-  gettext=0.18* \
-  texinfo=5.2* \
-  rsync=3.1* \
-  psmisc=22.20* \
-  vim=2:7.4* \
-  groff=1.22.*
+# echo "================= Installing basic packages ==================="
+# apt-get install -y  \
+#   sudo=1.8* \
+#   build-essential=11.6* \
+#   curl=7.35* \
+#   gcc=4:4.8* \
+#   make=3.81* \
+#   openssl=1.0* \
+#   software-properties-common=0.92* \
+#   wget=1.15* \
+#   nano=2.2* \
+#   unzip=6.0* \
+#   zip=3.0*\
+#   openssh-client=1:6.6* \
+#   libxslt1-dev=1.1* \
+#   libxml2-dev=2.9* \
+#   htop=1.0* \
+#   gettext=0.18* \
+#   texinfo=5.2* \
+#   rsync=3.1* \
+#   psmisc=22.20* \
+#   vim=2:7.4* \
+#   groff=1.22.*
 
 # rsync throws a warning that is not resolved yet - https://github.com/Microsoft/WSL/issues/2782
 
@@ -51,15 +51,15 @@ apt-get install  -y \
   python-software-properties=0.92* \
   python-dev=2.7*
 
-export VIRTUALENV_VERSION=16.4.0
-echo "================= Adding $VIRTUALENV_VERSION ==================="
-sudo pip install virtualenv=="$VIRTUALENV_VERSION"
+# export VIRTUALENV_VERSION=16.4.0
+# echo "================= Adding $VIRTUALENV_VERSION ==================="
+# sudo pip install virtualenv=="$VIRTUALENV_VERSION"
 
-export GIT_VERSION=1:2.*
-echo "================= Installing Git "$GIT_VERSION" ==================="
-add-apt-repository ppa:git-core/ppa -y
-apt-get update
-apt-get install  -y git="$GIT_VERSION"
+# export GIT_VERSION=1:2.*
+# echo "================= Installing Git "$GIT_VERSION" ==================="
+# add-apt-repository ppa:git-core/ppa -y
+# apt-get update
+# apt-get install  -y git="$GIT_VERSION"
 
 
 # # Git-LFS throws a warning that can be ignored - https://github.com/git-lfs/git-lfs/issues/2837
